@@ -1,0 +1,255 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Main container styling */
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent scrolling on the main container */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Adjust width as needed */
+    background-color: #1c1c1c; /* Sidebar background color */
+    padding: 20px;
+}
+
+.logo {
+    width: 100%; /* Full width of the sidebar */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Ensures the image doesn't overflow */
+}
+
+.logo img {
+    width: 100%; /* Makes the logo responsive to sidebar width */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image fills the container */
+    border-radius: 50%; /* Make the image circular, if desired */
+}
+
+.sidebar h1 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    text-align:center
+
+
+}
+
+.sidebar p {
+    font-size: 14px;
+    color: red;
+    text-align:center
+}
+
+/* Sidebar links */
+nav h3 {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ffce00;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav ul li {
+    font-size: 14px;
+    padding: 8px 0;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+nav ul li:hover {
+    color: #ffce00;
+}
+
+/* Content area styling */
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+/* Assuming this is the parent container for the buttons */
+.button-container {
+    display: flex;
+    gap: 10px; /* Reduces space between buttons */
+    justify-content: flex-end; /* Aligns buttons to the right, optional */
+}
+
+.button-container .btn {
+    padding: 10px 15px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-container .btn:hover {
+    background-color: #c0392b;
+}
+
+
+.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: white;
+    background-color: #ff5a5f;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff2f2f;
+}
+
+/* Banner styling */
+.banner {
+    background: #ffc107;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px;
+    color: #333;
+}
+
+/* Ensure the banner takes up the full viewport width and height */
+.banner {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://s3-alpha-sig.figma.com/img/bfaa/d74b/76ba1256d10f8af33fd5e08b7574087c?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=frpigQvSjavocA8u~XrRUYG0yX7pPqsoRgfg0bujc5O5G9I4klgICIsqgT0ilH6q46qhd0krl2cxm85E8wWEDaYAWqKoqWQYFrWeulxUL2NCm3gGTAcxmBSnWcPxQ8Jj6yteUU5XVpHNfIurHwOPA-iqIOWpjTL15r4R6dF1P2wmFrbZaPihYyWXOU7-D9W0MPzkHoOy266rsnJ8RniGyelPW8y4Tv1pnOi~sxXai5iMkIhkr3PhB9hk~bOBtqQyPREHtY~YsP~M1r7lUvtuD-Z49IAp~KeBtN4He~QCyDPMlOwtEWXcYBopKzAAvIir24MRG-gvflbLSG0RS~87CA__');
+    background-size: cover; /* Cover entire banner area */
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center text content */
+.banner-content {
+    text-align: center;
+    color: white;
+    max-width: 80%;
+}
+
+/* Style for the button to appear at center-bottom */
+.order-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Menu section styling */
+.menu {
+    flex-grow: 1;
+    overflow-y: auto; /* Allow vertical scrolling in the menu section */
+    padding: 20px;
+}
+
+.menu h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Menu grid styling */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Menu item styling */
+.menu-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.menu-item button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+    background-color: #ff2f2f;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
